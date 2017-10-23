@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>SYNCTER | AutoShop Management System</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--<link rel="stylesheet" href="assets/css/main.css" />-->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/sidemenu.css">
+    <link rel="stylesheet" href="assets/css/main-container.css">
+	</head>
+	<body>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3 side-menu">
+          <ul>
+            <li><a href="#" onclick="showWelcome()">Main</a></li>
+            <li><a href="#" onclick="showCustomers()">Customers</a></li>
+            <li><a href="#" onclick="showInventory()">Inventory</a></li>
+						<li><a href="#" id="btnShowTransactions">Transactions</a></li>
+          </ul>
+        </div>
+        <div class="col-md-9 main-container" id="main-container">
+          <h1>
+            AutoShop Management System
+          </h1>
+          <p>
+            Syncter Software Solutions
+          </p>
+
+          <div class="row">
+            <img src="assets/images/car-repair.png" alt=""
+              class="img img-responsive front-image" width="50%">
+          </div>
+
+          <span class="license-label">This software is licensed to:</span>
+          <br>
+          <span class="licensee">Alexius Academia</span>
+        </div>
+      </div>
+    </div>
+
+		<!-- Scripts -->
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+	  <script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    
+    <script>if (window.module) module = window.module;</script>
+	</body>
+</html>

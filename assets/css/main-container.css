@@ -1,0 +1,45 @@
+body {
+  background-color: #54339E;
+}
+
+.main-container {
+  color: #ffffff;
+  padding: 20px;
+}
+
+.license-label {
+  position: fixed;
+  font-size: 1.2em;
+  font-weight: lighter;
+  bottom: 100px;
+}
+
+.licensee {
+  position: fixed;
+  font-size: 1.6em;
+  bottom: 60px;
+}
+
+.front-image {
+  display: block;
+  margin: 20px auto;
+}
+
+.table-header {
+  background-color: #ffffff;
+  color: gray;
+}
+
+.page-title {
+  text-align: center;
+}
+
+table tbody tr td{
+  font-weight: lighter;
+  font-size: 1.2em;
+  font-family: monospace;
+}
+
+a {
+  color: yellow;
+}
