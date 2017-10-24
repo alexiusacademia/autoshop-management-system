@@ -17,7 +17,7 @@ This app uses the module [electron-db](https://github.com/alexiusacademia/electr
 - [ ] View Sales
 - [ ] View Items Inventory
 - [x] Add Job
-- [ ] View Job List
+- [x] View Job List
 - [ ] Update Job
 - [ ] Print Report
 

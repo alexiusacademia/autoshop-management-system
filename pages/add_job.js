@@ -26,7 +26,7 @@ $('#btn-new-job').on('click', () => {
     let job = {
       'job_name': jobName,
       'job_description': jobDescription,
-      'job_cost': jobCost
+      'job_cost': parseFloat(jobCost)
     }
     db.insertTableContent('jobs', job, (succ, msg) => {
       if (succ) {
