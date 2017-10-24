@@ -13,6 +13,8 @@
   font-size: 1.2em;
   border-bottom: 1px solid orange;
   padding: 10px;
+  margin-left: -50px;
+  text-align: center;
 }
 
 .side-menu ul li a {
