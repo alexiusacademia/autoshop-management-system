@@ -1,9 +1,5 @@
 const db = require('electron-db');
 
-if (!$('#err-alert').hasClass('hidden')) {
-  $('#err-alert').addClass('hidden');
-}
-
 /**
  * When the add vehicle button is clicked
  */
@@ -14,6 +10,10 @@ $('#btn-new-vehicle').on('click', function() {
   let vehicle_model = $('#vehicle-model').val();
   let vehicle_model_year = $('#vehicle-model-year').val();
   let vehicle_type = $('#vehicle-type').val();
+
+  if (!$('#err-alert').hasClass('hidden')) {
+    $('#err-alert').addClass('hidden');
+  }
 
   // Get the customer from the selected customer
   let customerId;

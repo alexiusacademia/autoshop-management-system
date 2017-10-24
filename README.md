@@ -4,9 +4,9 @@ A desktop software for automotive shop management created using atom electron. T
 This app uses the module [electron-db](https://github.com/alexiusacademia/electron-db) store data locally and immitate a database-like storage.
 
 ### App Features:
-- [x] Add/View Customer
+- [x] Add/View Customer Details
 - [ ] Update Customer Details
-- [ ] View Customers List
+- [x] View Customers List
 - [x] Add Vehicle
 - [ ] View Vehicle
 - [ ] Update Vehicle Information
@@ -16,7 +16,9 @@ This app uses the module [electron-db](https://github.com/alexiusacademia/electr
 - [ ] Add/View Item Transaction
 - [ ] View Sales
 - [ ] View Items Inventory
-- [ ] Add/View/Update Job
+- [x] Add Job
+- [ ] View Job List
+- [ ] Update Job
 - [ ] Print Report
 
 ### Contribute
