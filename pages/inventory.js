@@ -22,6 +22,7 @@ function showItemsList() {
         tblString += '<td>' + items[i].item_quantity + '</td>';
         tblString += '<td>' + currencyFormat(items[i].buying_price) + '</td>';
         tblString += '<td>' + currencyFormat(items[i].selling_price) + '</td>';
+        tblString += '<td><a class="btn btn-default" href="#" id="' + items[i].id + '" onclick="showEditItemView(this)">Edit</a></td>';
         tblString += '</tr>';
       }
     
@@ -39,6 +40,22 @@ $('#btn-add-item-page').on('click', () => {
   $('#main-container').load('pages/add_item.html', () => {
   });
 });
+
+/**
+ * Function when the show edit item link is clicked for a specific item
+ * @param {*} event 
+ */
+function showEditItemView(event) {
+  // Set the selected customer in the local file
+  // Make the id an Int
+  db.updateRow('app', { 'cat': 'settings' }, { 'selectedItem': parseInt(event.id) }, () => {
+  });
+
+  // Load the customer detail view
+  $('#main-container').load('pages/edit_item.html', () => {
+
+  });
+}
 
 /**
  * Function to format number to currency.

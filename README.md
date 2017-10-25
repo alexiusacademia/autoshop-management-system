@@ -15,8 +15,9 @@ This app uses the module [electron-db](https://github.com/alexiusacademia/electr
 - [ ] Add/View/Update Item
 - [ ] Add/View Item Transaction
 - [ ] View Sales
-- [x] Add iItem
-- [x] View Items Inventory
+- [x] Add item
+- [x] Update item
+- [x] View Items Inventory/List
 - [x] Add Job
 - [x] View Job List
 - [ ] Update Job

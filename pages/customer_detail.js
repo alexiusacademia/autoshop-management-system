@@ -13,6 +13,7 @@ function loadCustomerDetails() {
             customerId = rows[0].selectedCustomer;
         } else {
             console.log("Error loading Id.");
+            return;
         }
     });
 
