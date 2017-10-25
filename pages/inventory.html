@@ -1,8 +1,28 @@
-<template class="section-template">
-  <section id="inventory" class="wrapper-style-1">
-    <div class="inner">
-     <h2>Inventory</h2>
-     
-   </div>
-  </section>
-</template>
+<div class="row">
+  <h2 class="page-title">Items Inventory</h2>
+</div>
+
+<div class="row">
+  <button type="button" class="btn btn-info btn-lg" id="btn-add-item-page">
+    Add Item
+  </button>
+  <br><br>
+</div>
+
+<div class="row">
+  <table class="table table-responsive">
+    <thead class="table-header">
+      <th>Item Name</th>
+      <th>Description</th>
+      <th>Unit</th>
+      <th>Stock</th>
+      <th>Buying</th>
+      <th>Selling Price</th>
+    </thead>
+    <tbody id="table-items">
+
+    </tbody>
+  </table>
+</div>
+
+<script src="pages/inventory.js"></script>
