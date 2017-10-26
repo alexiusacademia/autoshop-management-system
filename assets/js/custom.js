@@ -37,8 +37,10 @@ $('#btnShowJobsList').on('click', () => {
 });
 
 /**
- * Show list of item transactions view
+ * Show list of transactions view
  */
-$('#btnShowTransactions').on('click', function(){
-  alert('Transactions');
+$('#btnShowTransactions').on('click', function () {
+  $('#main-container').load('pages/transactions.html', () => {
+
+  });
 });

@@ -67,6 +67,19 @@ $('#btn-new-item').on('click', () => {
       $('#err-alert').removeClass('hidden');
       $('#err-alert').addClass('alert-success');
       $('#err-alert').html("Item added successfully!");
+
+      // Insert record into transaction table, create new transaction
+      let transaction = {
+        'title': 'Adding item',
+        'description': itemName + ' - ' + itemDescription,
+        'expenses': parseFloat(buyingPrice * quantity),
+        'sales': 0.0,
+        'remarks': 'Add item to inventory.'
+      };
+      db.insertTableContent('transactions', transaction, (succ, msg) => {
+        
+      });
+
     } else {
       $('#err-alert').removeClass('hidden');
       $('#err-alert').addClass('alert-danger');
