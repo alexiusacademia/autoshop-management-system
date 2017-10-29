@@ -1,6 +1,8 @@
 # Autoshop Management System
 A desktop software for automotive shop management created using atom electron. This project is to demonstrate creating desktop application using web technologies.
 
+![](automotive-system.png)
+
 This app uses the module [electron-db](https://github.com/alexiusacademia/electron-db) store data locally and immitate a database-like storage.
 
 ### App Features:

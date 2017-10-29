@@ -14,7 +14,7 @@
   border-bottom: 1px solid orange;
   padding: 10px;
   margin-left: -50px;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .side-menu ul li a {
