@@ -44,3 +44,12 @@ $('#btnShowTransactions').on('click', function () {
 
   });
 });
+
+/**
+ * 
+ */
+$('#btnShowWorkOrders').on('click', () => {
+  $('#main-container').load('pages/work_orders.html', () => {
+
+  });
+});

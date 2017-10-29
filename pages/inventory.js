@@ -26,7 +26,7 @@ function showItemsList() {
         tblString += '</tr>';
       }
     
-      document.getElementById('table-items').innerHTML = tblString;
+      $('#table-items').html(tblString);
     }
   }
 }
