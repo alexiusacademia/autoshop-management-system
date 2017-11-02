@@ -9,3 +9,12 @@ db.getAll('work_orders', (succ, data) => {
     console.log(workOrders);
   }
 });
+
+/**
+ * When new work order button is clicked
+ */
+$('#btn-new-work-order').on('click', () => {
+  // Show new work order page
+  $('#main-container').load('pages/new_work_order.html', () => {
+  });
+});
