@@ -12,7 +12,7 @@ This app uses the module [electron-db](https://github.com/alexiusacademia/electr
 - [x] Add Vehicle
 - [ ] View Vehicle
 - [ ] Update Vehicle Information
-- [ ] Create Work Order
+- [x] Create Work Order
 - [ ] View List of Work Orders
 - [ ] Add/View/Update Item
 - [ ] Add/View Item Transaction
