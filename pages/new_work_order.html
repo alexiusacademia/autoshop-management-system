@@ -6,19 +6,33 @@
 <br>
 
 <div class="row form-group">
-    <label for="vehicle" class="col-md-2 col-sm-4 col-form-label">Customer</label>
-    <div class="col-md-10 col-sm-8">
-        <label for="" class="form-control" id="customer-name"></label>
-    </div>
+  <label for="vehicle" class="col-md-2 col-sm-4 col-form-label">Date</label>
+  <div class="col-md-10 col-sm-8">
+    <input type="text" class="form-control" id="date" placeholder="MM/DD/YYYY" />
   </div>
+</div>
+
+<div class="row form-group">
+  <label for="vehicle" class="col-md-2 col-sm-4 col-form-label">Customer</label>
+  <div class="col-md-10 col-sm-8">
+    <label for="" class="form-control" id="customer-name"></label>
+  </div>
+</div>
 
 <div class="row form-group">
   <label for="vehicle" class="col-md-2 col-sm-4 col-form-label">Vehicle</label>
   <div class="col-md-10 col-sm-8">
-      <select class="form-control selectpicker" name="" id="vehicle">
-        
-      </select>
+    <select class="form-control selectpicker" name="" id="vehicle">
+
+    </select>
   </div>
 </div>
+
+<div class="row">
+  <a class="btn btn-info" id="btn-create-work-order" href="#">Create</a>
+</div>
+
+<br>
+<div class="alert hidden" id="err-alert"></div>
 
 <script src="pages/new_work_order.js"></script>

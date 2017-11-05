@@ -7,7 +7,8 @@
     "bootstrap": "^3.3.7",
     "bootstrap-select": "^1.12.4",
     "electron": "^1.7.9",
-    "electron-db": "*"
+    "electron-db": "*",
+    "bootstrap-datepicker": "*"
   },
   "devDependencies": {},
   "scripts": {
