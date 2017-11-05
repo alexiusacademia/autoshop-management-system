@@ -64,3 +64,30 @@ function showEditItemView(event) {
 function currencyFormat (num) {
   return "\u20B1 " + num.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
 }
+
+$('#search').keyup(() => {
+  // Get the search text
+  let searchString = $('#search').val();
+  
+  db.search('items', 'item_name', searchString, (succ, data) => {
+    if (succ) {
+      var tblString = '';
+      for (var i = 0; i < data.length; i++) {
+        tblString += '<tr>';
+        tblString += '<td>' + data[i].item_name + '</td>';
+        tblString += '<td>' + data[i].item_description + '</td>';
+        tblString += '<td>' + data[i].item_unit + '</td>';
+        tblString += '<td>' + data[i].item_quantity + '</td>';
+        tblString += '<td>' + currencyFormat(data[i].buying_price) + '</td>';
+        tblString += '<td>' + currencyFormat(data[i].selling_price) + '</td>';
+        tblString += '<td><a class="btn btn-default" href="#" id="' + data[i].id + '" onclick="showEditItemView(this)">Edit</a></td>';
+        tblString += '</tr>';
+      }
+    
+      document.getElementById('table-items').innerHTML = tblString;
+    }else{
+      console.log('Error retrieving result.');
+    }
+  })
+
+});

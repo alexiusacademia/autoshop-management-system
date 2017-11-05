@@ -5,8 +5,9 @@
   "main": "main.js",
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "electron-db": "^0.4.3",
-    "electron": "^1.7.9"
+    "bootstrap-select": "^1.12.4",
+    "electron": "^1.7.9",
+    "electron-db": "*"
   },
   "devDependencies": {},
   "scripts": {

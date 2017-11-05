@@ -80,3 +80,10 @@ $('#btn-add-vehicle').on('click', () => {
 
     });
 });
+
+$('#new-work-order').on('click', () => {
+    // Load the add vehicle view
+    $('#main-container').load('pages/new_work_order.html', () => {
+
+    });
+});

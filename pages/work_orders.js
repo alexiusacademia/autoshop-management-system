@@ -6,7 +6,6 @@ db.getAll('work_orders', (succ, data) => {
   let workOrders;
   if (succ) {
     workOrders = data;
-    console.log(workOrders);
   }
 });
 

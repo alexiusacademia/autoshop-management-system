@@ -49,3 +49,27 @@ function showCustomerDetails(event) {
 
   });
 }
+
+$('#search').keyup(() => {
+  // Get the search text
+  let searchString = $('#search').val();
+  
+  db.search('customers', 'name', searchString, (succ, data) => {
+    if (succ) {
+      var tblString = '';
+      for (var i = 0; i < data.length; i++) {
+        tblString += '<tr>';
+        tblString += '<td>' + data[i].name + '</td>';
+        tblString += '<td>' + data[i].address + '</td>';
+        tblString += '<td>' + data[i].id + '</td>';
+        tblString += '<td><a class="btn btn-default" href="#" id="' + data[i].id + '" onclick="showCustomerDetails(this)">Details</a></td>';
+        tblString += '</tr>';
+      }
+    
+      document.getElementById('table-customers').innerHTML = tblString;
+    }else{
+      console.log('Error retrieving result.');
+    }
+  })
+
+});
