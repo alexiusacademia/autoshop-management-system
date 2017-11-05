@@ -1,4 +1,4 @@
-module.exports.appTable = 'table';
+module.exports.appTable = 'app';
 module.exports.customersTable = 'customers';
 module.exports.itemsTable = 'items';
 module.exports.jobsTable = 'jobs';

@@ -5,10 +5,10 @@
   "main": "main.js",
   "dependencies": {
     "bootstrap": "^3.3.7",
+    "bootstrap-datepicker": "*",
     "bootstrap-select": "^1.12.4",
     "electron": "^1.7.9",
-    "electron-db": "*",
-    "bootstrap-datepicker": "*"
+    "electron-db": "^0.6.4"
   },
   "devDependencies": {},
   "scripts": {
