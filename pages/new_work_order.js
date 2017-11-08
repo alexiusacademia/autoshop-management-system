@@ -63,7 +63,7 @@ $('#btn-create-work-order').on('click', () => {
   if (validateDate(woDate)) {
     wo.customer = selectedCustomer;
     wo.date = woDate;
-    wo.vehicle = $('#vehicle').val();
+    wo.vehicle = parseInt($('#vehicle').val());
 
     db.insertTableContent(constant.workordersTable, wo, (succ, msg) => {
       if (!$('#err-alert').hasClass('hidden')) {
