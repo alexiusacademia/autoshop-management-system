@@ -63,12 +63,10 @@ db.getRows(constant.workordersTable, { 'id': work_order_id }, (succ, workOrders)
           jobsCost += jobsDetail[j].job_cost
         }
 
-        tblString += '<tr>';
-        tblString += '  <td><strong>Sub-Total</strong></td>';
-        tblString += '  <td></td>';
-        tblString += '  <td><strong>' + currencyFormat(jobsCost) + '</strong></td>';
-        tblString += '</tr>';
+        // Display sub total for jobs
+        $('#sub-total-jobs').text('Sub Total: ' + currencyFormat(jobsCost));
 
+        // Display the table body
         $('#table-jobs').html(tblString);
 
       }
