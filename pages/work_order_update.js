@@ -45,7 +45,7 @@ db.getRows(constant.workordersTable, { 'id': work_order_id }, (succ, workOrders)
 
         for (let i = 0; i < jobs.length; i++) {
           let job = jobs[i];
-          db.getRows(constant.jobsTable, {'id':job}, (succ, data) => {
+          db.getRows(constant.jobsTable, { 'id': job }, (succ, data) => {
             if (succ) {
               jobsDetail.push(data[0]);
             }
@@ -80,7 +80,9 @@ db.getRows(constant.workordersTable, { 'id': work_order_id }, (succ, workOrders)
   }
 });
 
-
+/**
+ * When add job is clicked
+ */
 $('#btn-add-job').on('click', () => {
   // Load the add job view
   $('#main-container').load('pages/add_work_order_job.html', () => {
@@ -92,6 +94,16 @@ $('#btn-add-job').on('click', () => {
  * Function to format number to currency.
  * @param {*} num [Number to be formatted]
  */
-function currencyFormat (num) {
+function currencyFormat(num) {
   return "\u20B1 " + num.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
 }
+
+/**
+ * When add item is clicked
+ */
+$('#btn-add-item').on('click', () => {
+  // Load the add item view
+  $('#main-container').load('pages/add_work_order_item.html', () => {
+
+  });
+});
