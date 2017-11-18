@@ -75,6 +75,16 @@ db.getRows(constant.workordersTable, { 'id': work_order_id }, (succ, workOrders)
       console.log('No jobs included in the work order.');
     }
 
+    // Get the list of items
+    if (wo.hasOwnProperty('items')) {
+      let itemsCount = wo.items.length;
+      if (itemsCount > 0) {
+
+      } else {
+        console.log('No items in the list.');
+      }
+    }
+
   } else {
     alert('Error loading work order data.');
   }
