@@ -79,6 +79,33 @@ db.getRows(constant.workordersTable, { 'id': work_order_id }, (succ, workOrders)
     if (wo.hasOwnProperty('items')) {
       let itemsCount = wo.items.length;
       if (itemsCount > 0) {
+        let items = wo.items;
+        let itemsCost = 0.0;
+        let tblItems = '';
+
+        for (let i = 0; i < itemsCount; i++) {
+          let item = items[i];
+          
+          let itemDetails;
+          db.getRows(constant.itemsTable, {'id': item.id}, (succ, items) => {
+            itemDetails = items[0];
+
+            tblItems += '<tr>';
+            tblItems += ' <td>'+ itemDetails.item_name +'</td>';
+            tblItems += ' <td>'+ itemDetails.item_description +'</td>';
+            tblItems += ' <td>'+ itemDetails.item_unit +'</td>';
+            tblItems += ' <td>'+ item.quantity +'</td>';
+            tblItems += ' <td>'+ itemDetails.selling_price +'</td>';
+            tblItems += ' <td>'+ currencyFormat(itemDetails.selling_price * item.quantity) +'</td>';
+            tblItems += '</tr>';
+
+            itemsCost += itemDetails.selling_price * item.quantity;
+          });
+
+        }
+
+        $('#table-items').html(tblItems);
+        $('#sub-total-items').text(currencyFormat(itemsCost));
 
       } else {
         console.log('No items in the list.');
