@@ -14,7 +14,7 @@ function listCustomers() {
 
   var tblString = '';
   for (var i = 0; i < customersList.length; i++) {
-    tblString += '<tr>';
+    tblString += '<tr class="main-container">';
     tblString += '<td>' + customersList[i].name + '</td>';
     tblString += '<td>' + customersList[i].address + '</td>';
     tblString += '<td>' + customersList[i].id + '</td>';
