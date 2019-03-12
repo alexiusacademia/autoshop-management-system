@@ -58,7 +58,7 @@ $('#search').keyup(() => {
     if (succ) {
       var tblString = '';
       for (var i = 0; i < data.length; i++) {
-        tblString += '<tr>';
+        tblString += '<tr class="main-container">';
         tblString += '<td>' + data[i].name + '</td>';
         tblString += '<td>' + data[i].address + '</td>';
         tblString += '<td>' + data[i].id + '</td>';
